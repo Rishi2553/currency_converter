@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class CurrencyConvrerterMaterialApp extends StatelessWidget{
@@ -14,7 +15,18 @@ class CurrencyConvrerterMaterialApp extends StatelessWidget{
                   ),
               );
     return  Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.blueGrey,
+        title: Text(
+          "Currency Converter",
+          style: TextStyle(
+            color: Colors.white,
+          ),
+          ),
+        centerTitle: true,
+      ),
       backgroundColor: Colors.blueGrey,
+      
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -28,7 +40,7 @@ class CurrencyConvrerterMaterialApp extends StatelessWidget{
           ),
           ),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(10.0),
             child: TextField(
               style: const TextStyle(
                 color: Colors.black,
@@ -38,7 +50,7 @@ class CurrencyConvrerterMaterialApp extends StatelessWidget{
                 hintStyle: const TextStyle(
                   color: Colors.black,
                 ),
-                prefixIcon: const Icon(Icons.monetization_on),
+                prefixIcon: const Icon(Icons.monetization_on_outlined),
                 prefixIconColor: Colors.black,
                 filled: true,
                 fillColor: Colors.white,
@@ -51,9 +63,34 @@ class CurrencyConvrerterMaterialApp extends StatelessWidget{
               ),
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: TextButton(
+              onPressed: (){
+                if(kDebugMode){
+                   print("button clicked");
+                }
+               
+              },
+              style: TextButton.styleFrom(
+                backgroundColor: Colors.black,
+                foregroundColor: Colors.white,
+                minimumSize: 
+                  const Size(double.infinity, 50),
+                 
+                
+                  shape:
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                
+              ),
+               child: const Text("Convert")
+               ),
+          ),
         ],
       ),
-      ),
+      ), 
     );
   }
 }
