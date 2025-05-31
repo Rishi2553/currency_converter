@@ -1,6 +1,4 @@
-import 'dart:convert';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class CurrencyConvrerterMaterialAppPage extends StatefulWidget{
@@ -15,7 +13,7 @@ class _CurrencyConvrerterMaterialAppPageState extends State<CurrencyConvrerterMa
   void convert(){
     
               setState(() {  
-                result=double.parse(textEditingController.text)*81;   
+                result=double.parse(textEditingController.text)*85.56;   
               });
   }
 
