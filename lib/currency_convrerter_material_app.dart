@@ -13,9 +13,9 @@ class _CurrencyConvrerterMaterialAppPageState extends State<CurrencyConvrerterMa
   double result=0;
   final TextEditingController textEditingController =TextEditingController();
   void convert(){
-    result=double.parse(textEditingController.text)*81;
-              setState(() {
-                 
+    
+              setState(() {  
+                result=double.parse(textEditingController.text)*81;   
               });
   }
 
