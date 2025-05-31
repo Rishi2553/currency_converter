@@ -13,7 +13,7 @@ class _CurrencyConvrerterMaterialAppPageState extends State<CurrencyConvrerterMa
   void convert(){
     
               setState(() {  
-                result=double.parse(textEditingController.text)*85.56;   
+                result=double.parse(textEditingController.text)*85.5;   
               });
   }
 
