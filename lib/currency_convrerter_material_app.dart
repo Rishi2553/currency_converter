@@ -1,9 +1,25 @@
+import 'dart:convert';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-class CurrencyConvrerterMaterialApp extends StatelessWidget{
-  const CurrencyConvrerterMaterialApp({super.key});
+class CurrencyConvrerterMaterialAppPage extends StatefulWidget{
+  const CurrencyConvrerterMaterialAppPage({super.key});
   @override
+  State<CurrencyConvrerterMaterialAppPage> createState() => _CurrencyConvrerterMaterialAppPageState();
+
+}
+class _CurrencyConvrerterMaterialAppPageState extends State<CurrencyConvrerterMaterialAppPage>{
+  double result=0;
+  final TextEditingController textEditingController =TextEditingController();
+  void convert(){
+    result=double.parse(textEditingController.text)*81;
+              setState(() {
+                 
+              });
+  }
+
+ @override
   Widget build(BuildContext context) {
     final boder = OutlineInputBorder(
                 borderSide: BorderSide(
@@ -32,7 +48,7 @@ class CurrencyConvrerterMaterialApp extends StatelessWidget{
           mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            '0',
+            'INR $result',
           style: const TextStyle(
             fontSize: 50,
             fontWeight: FontWeight.bold,
@@ -42,6 +58,8 @@ class CurrencyConvrerterMaterialApp extends StatelessWidget{
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: TextField(
+              controller: textEditingController,
+              
               style: const TextStyle(
                 color: Colors.black,
               ),
@@ -66,12 +84,7 @@ class CurrencyConvrerterMaterialApp extends StatelessWidget{
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: TextButton(
-              onPressed: (){
-                if(kDebugMode){
-                   print("button clicked");
-                }
-               
-              },
+              onPressed: convert,
               style: TextButton.styleFrom(
                 backgroundColor: Colors.black,
                 foregroundColor: Colors.white,
@@ -94,3 +107,8 @@ class CurrencyConvrerterMaterialApp extends StatelessWidget{
     );
   }
 }
+
+
+// class CurrencyConvrerterMaterialAppPagee extends StatelessWidget{
+//   const CurrencyConvrerterMaterialAppPagee({super.key});
+ 

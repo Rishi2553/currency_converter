@@ -11,7 +11,7 @@ class myapp extends StatelessWidget{
    
     // TODO: implement build
    return const MaterialApp(
-    home: CurrencyConvrerterMaterialApp(),
+    home: CurrencyConvrerterMaterialAppPage(),
    );
   }
 }
